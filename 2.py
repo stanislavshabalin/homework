@@ -1,28 +1,6 @@
 
-amount = int(input("Кол-во элементов массива: "))
-i = 0
-my_list = []
-
-
-while i < amount:
-    my_list.append(input("Значение элемента: "))
-    i = i + 1
-
-n = 0
-
-for element in range(len(my_list)):
-
-    if len(my_list) % 2 == 0:
-        while n < len(my_list):
-            my_list[n], my_list[n + 1] = my_list[n + 1], my_list[n]
-            n += 2
-
-    elif len(my_list) % 2 != 0:
-        while n < (len(my_list) - 1):
-            my_list[n], my_list[n + 1] = my_list[n + 1], my_list[n]
-            n += 2
-
-
-
-print(my_list)
-
+time_sec = int(input("Write your time there in seconds: "))
+sec = int((time_sec % 60))
+minute = int((time_sec // 60 % 60))
+hour = int((time_sec // 3600 % 24))
+print('{0:02}:{1:02}:{2:02}'.format(hour, minute, sec))
